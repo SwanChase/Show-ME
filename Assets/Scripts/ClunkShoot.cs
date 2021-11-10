@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ClunkShoot : MonoBehaviour
@@ -18,7 +16,7 @@ public class ClunkShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Fire();
         }
@@ -26,7 +24,6 @@ public class ClunkShoot : MonoBehaviour
 
     private void Fire()
     {
-
         Instantiate(bullet, barrel.transform);
     }
 }
