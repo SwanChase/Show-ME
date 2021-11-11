@@ -7,7 +7,6 @@ public class WanderingAI : MonoBehaviour
 {
     public float wanderRadius;
     public float wanderTimer;
-    public float radius = 3;
 
     private Transform target;
     private NavMeshAgent agent;
@@ -41,9 +40,15 @@ public class WanderingAI : MonoBehaviour
             timer = 0;
         }
 
+        if (timer >= wanderTimer && !wandering)
+        {
+            agent.SetDestination(pl1.transform.position);
+            timer = 0;
+        }
+
         float dist = Vector3.Distance(pl1.transform.position, transform.position);
 
-        if (dist < radius)
+        if (dist < wanderRadius && wandering)
         {
             wandering = false;
         }
@@ -62,10 +67,5 @@ public class WanderingAI : MonoBehaviour
         return navHit.position;
     }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
 
 }
