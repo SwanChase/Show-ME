@@ -1,9 +1,54 @@
 fileFormatVersion: 2
-guid: aabeca2745a9edd44ba01bb5c8d86065
+guid: 511cd41a89ad9bc43bb4b9c2b30aa735
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackWall1
+    second: {fileID: 2100000, guid: a8a4f4fee8d05ee41a4aef3cee9e5095, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallCorner_MAT
+    second: {fileID: 2100000, guid: 33df17142695a61419ce7c5ec51f301f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallDeco_MAT
+    second: {fileID: 2100000, guid: ba0e750b43c0ee0409d7a4901e6a3cad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallV1_MAT
+    second: {fileID: 2100000, guid: 23131db04bfcfaf42867ad3259061bc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallV2_MAT
+    second: {fileID: 2100000, guid: a199dbb206ebfdc49bdb956fb02a1f24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallV3_MAT
+    second: {fileID: 2100000, guid: fdce39c5f3dbf4c45979b1772e3c7464, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallV4_MAT
+    second: {fileID: 2100000, guid: e3290786578ef314fb16481e785c9011, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallV5_MAT
+    second: {fileID: 2100000, guid: cd27475385b97954d9c0b33e8f152014, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall_Pillars_MAT
+    second: {fileID: 2100000, guid: 75eb26566b0b6274581454fdd23dc29e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -85,7 +130,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
