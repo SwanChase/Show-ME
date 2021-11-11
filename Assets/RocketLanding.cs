@@ -4,14 +4,12 @@ public class RocketLanding : MonoBehaviour
 {
     public GameObject shopUI;
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
-        
+        if(this.transform.position.y <= 3)
+        {
+            this.GetComponent<Rigidbody>().useGravity = false;
+        }
     }
 
     private void showUI()

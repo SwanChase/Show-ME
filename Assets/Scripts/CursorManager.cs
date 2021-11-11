@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Texture2D globalCursor;
+    public Texture2D shopCursor;
+
     void Start()
     {
-        //Set Cursor to not be visible
-        Cursor.visible = false;
+        Cursor.SetCursor(globalCursor, Vector2.zero, CursorMode.ForceSoftware);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseEnter()
     {
-        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = cursorPos;
+        
     }
+
 }
