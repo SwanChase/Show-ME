@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &467021478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 467021479}
+  m_Layer: 0
+  m_Name: Barrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &467021479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467021478}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.0014, y: 0.005704012, z: 0.1986}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_Children: []
+  m_Father: {fileID: 6768459965564668474}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &85174326101999664
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +458,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174076033747848890}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -3.5527136e-17, y: -0.18959814, z: 0.012581672}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -471,7 +501,7 @@ Transform:
   - {fileID: 398124246372828430}
   m_Father: {fileID: 6768459965564668474}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1195293673416836085
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +531,7 @@ Transform:
   m_Children:
   - {fileID: 8064372059427829197}
   - {fileID: 8136897456258328885}
+  - {fileID: 467021479}
   m_Father: {fileID: 2594709545899384258}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1405,6 +1436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2594709545899384258}
   - component: {fileID: 2524279128800775205}
+  - component: {fileID: 1326297475}
   m_Layer: 0
   m_Name: Turret_regrouped
   m_TagString: Untagged
@@ -1419,9 +1451,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3407415367399999352}
-  m_LocalRotation: {x: -0, y: 0.0000014603136, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.11, y: 1.1, z: 0.17}
-  m_LocalScale: {x: 8.5, y: 8.5, z: 8.5}
+  m_LocalScale: {x: 8.499999, y: 8.5, z: 8.499999}
   m_Children:
   - {fileID: 2661261990128334892}
   - {fileID: 6768459965564668474}
@@ -1442,6 +1474,25 @@ CapsuleCollider:
   m_Height: 0.2993771
   m_Direction: 1
   m_Center: {x: -0.0010940608, y: 0.008717004, z: 0.0065240157}
+--- !u!114 &1326297475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407415367399999352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa60b2c95b54d341be0db1c3d0b2f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 15
+  bulletPrefab: {fileID: 6904374600217271169, guid: bfd86c338afff744aa245a35175774a1, type: 3}
+  fireRate: 1
+  targetTag: Player
+  partToRotate: {fileID: 6768459965564668474}
+  turnSpeed: 10
+  Barrel: {fileID: 467021479}
 --- !u!1 &3436348070635752280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,8 +4305,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9214745605280192382}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.000011840878, y: -0.0014060001, z: 0.03425175}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0, y: -0.0014060001, z: -0.009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7417371215146292064}
@@ -4268,4 +4319,4 @@ Transform:
   - {fileID: 9217613795598306590}
   m_Father: {fileID: 6768459965564668474}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

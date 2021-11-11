@@ -8,9 +8,12 @@ public class CameraMovement : MonoBehaviour
     private GameObject player;
     private Vector3 initialCamera;
 
+    [SerializeField]
+    string CameraTarget = "Clunk_shooting";
+
     private void Start()
     {
-        player = GameObject.Find("Clunk_shooting");
+        player = GameObject.Find(CameraTarget);
         initialCamera = Camera.main.transform.position;
     }
 

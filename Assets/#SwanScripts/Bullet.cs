@@ -34,6 +34,11 @@ public class Bullet : MonoBehaviour
         //Check for a match with the specific tag on any GameObject that collides with your GameObject
         if (collision.gameObject)
         {
+            if (collision.gameObject.tag == "Enemy")
+            {
+                Debug.Log(collision.gameObject);
+                Destroy(collision.gameObject);
+            }
             //If the GameObject has the same tag as specified, output this message in the console
             if (particalSystem!)
             {
@@ -42,11 +47,6 @@ public class Bullet : MonoBehaviour
                 Disable();
             }
         }
-        else if (collision.gameObject.tag == "Enemy")
-        {
-            Destroy(collision.gameObject);
-        }
-        
     }
     private void Disable()
     {
