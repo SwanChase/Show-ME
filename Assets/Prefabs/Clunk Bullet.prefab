@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5bfeda7ba79314b92389be9fb915e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particalSystem: {fileID: 0}
+  particalSystem: {fileID: 8510202805861812085, guid: ff6c1cc1afc672a4ab95c461c2b5c4c3, type: 3}
   movespeed: 100
   offset: {x: 0, y: 0, z: 0}
 --- !u!54 &6904374600217271176

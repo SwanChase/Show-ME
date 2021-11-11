@@ -30,17 +30,26 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-
+        ContactPoint contact = collision.GetContact(0);
         //Check for a match with the specific tag on any GameObject that collides with your GameObject
         if (collision.gameObject)
         {
             //If the GameObject has the same tag as specified, output this message in the console
             if (particalSystem!)
             {
-                Debug.Log("Spawn partical");
-                Instantiate(particalSystem, this.gameObject.transform);
+                Instantiate(particalSystem, contact.point, Quaternion.LookRotation(contact.normal));
+                particalSystem.transform.parent = null;
+                Disable();
             }
-            Destroy(this.gameObject);
         }
+        else if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
+        
+    }
+    private void Disable()
+    {
+        gameObject.SetActive(false);
     }
 }
