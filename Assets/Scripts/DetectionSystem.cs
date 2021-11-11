@@ -11,8 +11,9 @@ public class DetectionSystem : MonoBehaviour
 	public LayerMask targetMask;
 	public LayerMask obstacleMask;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public List<Transform> visibleTargets = new List<Transform>();
+	//public List<Transform> nonVisibleTargets = new List<Transform>();
 
 	public float meshResolution;
 	public int edgeResolveIterations;
@@ -60,7 +61,11 @@ public class DetectionSystem : MonoBehaviour
 				if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
 				{
 					visibleTargets.Add(target);
-				}
+                }
+                else
+                {
+					//nonVisibleTargets.Add(target);
+                }
 			}
 		}
 	}
