@@ -184,9 +184,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3613636432184282857}
   - component: {fileID: 2756059769765127885}
+  - component: {fileID: 1725588323552432179}
+  - component: {fileID: 2774671627283635572}
   m_Layer: 0
   m_Name: Derpl_LP
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +200,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4138218293942113363}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029653306}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -5.97, y: 0.00000023841858, z: -3.16}
   m_LocalScale: {x: 55, y: 55, z: 55}
   m_Children:
@@ -219,7 +221,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 4
-  player2: 1
+  player2: 0
+--- !u!136 &1725588323552432179
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138218293942113363}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.025
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.013, z: 0}
+--- !u!114 &2774671627283635572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138218293942113363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e019c6283acf535489e7231506566e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrel: {fileID: 2356090369675853335, guid: 1ba5122c3d56fa34bb49e27d50298f54, type: 3}
+  bullet: {fileID: 6904374600217271169, guid: 6a7d6493fb1a1f546b4aca00fffe0f7f, type: 3}
 --- !u!1 &4464954492877378626
 GameObject:
   m_ObjectHideFlags: 0

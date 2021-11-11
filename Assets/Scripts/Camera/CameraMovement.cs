@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject player;
+    private Vector3 initialCamera;
+
+    private void Start()
     {
-        
+        player = GameObject.Find("Clunk_shooting");
+        initialCamera = Camera.main.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.position = player.transform.position + new Vector3(initialCamera.x, initialCamera.y, initialCamera.z);
     }
 }
