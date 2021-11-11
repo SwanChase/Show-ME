@@ -7,12 +7,22 @@ public class WanderingAI : MonoBehaviour
 {
     public float wanderRadius;
     public float wanderTimer;
+    public float radius = 3;
 
     private Transform target;
     private NavMeshAgent agent;
     private float timer;
+    private bool wandering = true;
 
     // Use this for initialization
+    public GameObject pl1;
+
+    private void Start()
+    {
+        pl1 = GameObject.Find("Clunk_shooting");
+    }
+
+
     void OnEnable()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -24,11 +34,18 @@ public class WanderingAI : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= wanderTimer)
+        if (timer >= wanderTimer && wandering)
         {
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
             agent.SetDestination(newPos);
             timer = 0;
+        }
+
+        float dist = Vector3.Distance(pl1.transform.position, transform.position);
+
+        if (dist < radius)
+        {
+            wandering = false;
         }
     }
 
@@ -44,4 +61,11 @@ public class WanderingAI : MonoBehaviour
 
         return navHit.position;
     }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
+
 }
