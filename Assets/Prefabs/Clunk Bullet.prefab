@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6904374600217271183}
   - component: {fileID: 6904374600217271176}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Clunk Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f4e081d8b495ae4f8c5ba0112ef9ab8, type: 2}
+  - {fileID: 2100000, guid: b6e5834e883bbf94c9b40b5d4e89f95e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -218,7 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5bfeda7ba79314b92389be9fb915e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particalSystem: {fileID: 0}
   movespeed: 100
+  offset: {x: 0, y: 0, z: 0}
 --- !u!54 &6904374600217271176
 Rigidbody:
   m_ObjectHideFlags: 0

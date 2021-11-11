@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barrel: {fileID: 303915742}
-  bullet: {fileID: 6904374600217271169, guid: 6a7d6493fb1a1f546b4aca00fffe0f7f, type: 3}
+  bullet: {fileID: 6904374600217271169, guid: 0d0b47d794822904ab619671d6f1a81d, type: 3}
 --- !u!1 &3897720917309395375
 GameObject:
   m_ObjectHideFlags: 0

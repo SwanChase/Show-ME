@@ -35,8 +35,11 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject)
         {
             //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("Spawn partical");
-            Instantiate(particalSystem, this.gameObject.transform);
+            if (particalSystem!)
+            {
+                Debug.Log("Spawn partical");
+                Instantiate(particalSystem, this.gameObject.transform);
+            }
             Destroy(this.gameObject);
         }
     }
