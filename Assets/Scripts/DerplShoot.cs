@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DerplShoot : MonoBehaviour
@@ -19,7 +16,7 @@ public class DerplShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.RightControl))
         {
             Fire();
         }
@@ -27,7 +24,6 @@ public class DerplShoot : MonoBehaviour
 
     private void Fire()
     {
-      
         Instantiate(bullet, barrel.transform);
     }
 }
